@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- <%= JSON.stringify (p) %> -->
+        <h1>Platypus: <%= p.name %></h1>
+        <h1>Age: <%= p.age %></h1>
+        <a href="/platypi/edit/<%= p._id %>">
+            <button>Edit entry</button>
+        </a>
+        <form action="/platypi/destroy/<%= p._id %>" method="POST">
+            <button>Delete</button>
+        </form>
+    </div>
+</body>
+</html>
